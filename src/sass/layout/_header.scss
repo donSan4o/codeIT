@@ -1,0 +1,131 @@
+#header {
+	min-height: 157px;
+	@media (max-width: 991.98px) {
+		min-height: 50px;
+	}
+	.logo {
+		@media (max-width: 575px) {
+			margin-left: 10px;
+		}
+		a {
+			color: $red;
+			font-size: 26px;
+			font-weight: bold;
+			position: relative;
+			&:before {
+				content: '';
+				width: 10px;
+				height: 2px;
+				background: $red;
+				position: absolute;
+				bottom: 1px;
+				left: 0;
+			}
+			b {
+				color: $black;
+			}
+			span {
+				display: block;
+				text-transform: uppercase;
+				letter-spacing: 10px;
+				color: $base-color;
+				font-size: 12px;
+			}
+		}
+	}
+	.navbar {
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 10px;
+		button {
+			outline: none;
+		}
+		.navbar-nav {
+			.nav-item {
+				margin-right: 6px;
+				@media (max-width: 992px) {
+					margin-bottom: 15px; 
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+				&>a {
+					color: $base-color;
+					text-transform: uppercase;
+					font-size: 13px;
+					position: relative;
+					&:hover {
+						color: $red;
+					}
+					&.active {
+						color: $red;
+						&:before {
+							content: '';
+							width: 10px;
+							height: 2px;
+							background: $red;
+							position: absolute;
+							bottom: 1px;
+							left: .5rem;
+							@media (max-width: 992px) {
+								display: none;
+							}
+						}
+					}
+				}
+				.dropdown-menu {
+					@media (max-width: 992px) {
+						border: 0;
+					}
+					a {
+						color: $base-color;
+						text-transform: uppercase;
+						font-size: 13px;
+						@media (max-width: 992px) {
+							text-align: center;
+							&:hover {
+								background: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		.basket {
+			width: 140px;
+			height: 44px;
+			border: 2px solid $base-color;
+			color: $base-color;
+			font-size: 15px;
+			font-weight: bold;
+			padding-left: 15px;
+			margin-left: 40px;
+			position: relative;
+			transition: all 0.3s;
+			@media (max-width: 992px) {
+				margin: 0 auto 30px;
+			}
+			i {
+				color: $red;
+				margin-right: 7px;
+				font-size: 22px;
+			}
+			.quantity {
+				width: 32px;
+				height: 32px;
+				background: $black;
+				font-size: 11px;
+				color: $white;
+				position: absolute;
+				right: -17px;
+				top: 50%;
+				transform: translateY(-50%);
+				border: 5px solid $white;
+			}
+			&:hover {
+				border-color: $red;
+				box-shadow: 1px 1px 15px 1px #ccc;
+			}
+		}
+	}
+}
